@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&family=Orbitron:wght@400;500&family=Open+Sans:wght@400;700&display=swap');
+
+/*Theme changing CSS logic */
+
+.light-theme {
+    background-color: #f0f0f0;
+    color: #948a8a4a;
+}
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+.theme-switcher {
+  font-size: 1rem; /* Adjust to match the navbar link size */
+  color: whitesmoke; /* Text color */
+  background: none; /* No background for a button-like appearance */
+  border: none; /* No border */
+  padding: 0.5rem 1rem; /* Vertical and horizontal padding */
+  cursor: pointer;
+  display: inline-block; /* Align with inline elements */
+  margin-right: auto; /* Pushes other navbar items to the right */
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.theme-switcher:hover {
+  color: #ddd; /* Lighten text color on hover */
+}
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1C1C1C;
+  background-image: url('images/triangle-button.png'), 
+                    url('images/circle.png'), 
+                    url('images/square-with-round-corners.png');
+  background-position: left -5% bottom 10%, /* Triangle */
+                       right 20% top -20%, /* Circle */
+                       right -12% bottom 10%; /* Square */
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 20% auto, /* Triangle */
+                   20% auto, /* Circle */
+                   20% auto; /* Square, adjust as necessary */
+  min-height: 100vh; /* Ensures at least the full height of the viewport */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  background-attachment: fixed; /* This will fix your background images in place */
+}
+
+
+html {
+  position: relative;
+  height: 100%; /* Ensure HTML grows with content */
+}
+
+.navbar, .navbar-brand, .navbar-nav .nav-link {
+  background-color: #1C1C1C !important;
+  font-size: 20px;
+  border: none;
+  color: whitesmoke !important;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.navbar-brand {
+  color: whitesmoke !important;
+  margin-right: auto; /* Ensures the menu label is pushed to the left */
+}
+
+.navbar-icon {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Added CSS to ensure navbar items are pushed to the right */
+.collapse.navbar-collapse {
+  justify-content: flex-end; /* Aligns nav-items to the right side */
+}
+
+.navbar-nav .nav-link {
+  text-decoration: none; /* Removes the underline from hyperlinks */
+  color: whitesmoke !important; /* Sets the text color */
+}
+ 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height instead of height */
+  text-align: center;
+  padding-top: 50px; /* Added padding to ensure content is pushed down if it overflows */
+  padding-bottom: 50px; /* Added padding to ensure content is not cut off at the bottom */
+}
+
+.main-content > h1:first-of-type {
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0.2em 0;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+
+.main-content h5 {
+  color: whitesmoke;
+  padding: 0.2em 0; /* Adds a bit of space around the text */
+
+}
+
+.main-content {
+  padding: 0;
+  margin: 0 auto; /* Center the content horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  border-radius: 50%; /* This will make the image round */
+  object-fit: cover; /* This will ensure the image covers the area without stretching */
+  border: 5px solid whitesmoke; /* Optional: if you want a white border like the avatar */
+  margin-top: 20px; /* Space between the image and the h5 */
+}
+
+.about-heading{
+  margin-top: 20px;
+  color: whitesmoke;
+}
+
+.about-text {
+  color: whitesmoke;
+  margin-top: 20px;
+  padding: 0.4em 1em; /* Adds a bit of space around the text, with proper units for horizontal padding */
+  line-height: 30px;
+  text-align: center; /* Centers the text within the paragraph */
+  max-width: 800px; /* You can set a max-width for better readability on wide screens */
+  margin-left: auto; /* These two margin properties will center the block itself */
+  margin-right: auto;
+}
+
+.skills-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 0;
+}
+
+.skill-column {
+  width: 30%; /* Adjust width as needed */
+  margin: 0 15px; /* Adjust margin as needed */
+  text-align: center;
+}
+
+.skill-icon {
+  width: 100px; /* Adjust icon size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+h2 {
+  color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: whitesmoke;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.additional-languages-text{
+  margin-bottom: 50px;
+}
+
+.check-my-work{
+  margin-bottom: 85px;
+}
+
+/* Portfolio Cards */
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adding a subtle shadow for depth */
+  max-width: 400px; /* Adjust this value to match your screenshot size */
+  margin: auto; /* This will center the card in the grid column */
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  color: white;
+  width: 100%;
+  padding: 30px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  border-radius: 0 0 10px 10px; /* Rounded corners for the bottom overlay */
+}
+
+.card:hover .card-info {
+  transform: translateY(0);
+}
+
+.card h3, .card p {
+  margin: 0; /* Adjust margin as needed */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF69B4; /* example button color    #6200ea   #FF00FF */  
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  width: calc(100% - 40px); /* Full width minus padding */
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+.github_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF69B4; /* example button color    #6200ea   #FF00FF */  
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  width: calc(100% - 40px); /* Full width minus padding */
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.github_btn:hover{
+  background-color: whitesmoke;
+}
+
+.github_btn img{
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  background-color: whitesmoke; /* darker shade for hover effect */
+}
+
+
+/* Social Media Icon for footer */
+
+:root {
+  --background: #060D23;
+  --linkedin: #0A66C2;
+  --youtube: #e52d27;
+  --x: #0F1419;
+  --white: #FFF;
+}
+
+.social-media-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.social-media-button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: grid;
+  place-items: center;
+}
+
+.social-media-button:hover {
+  outline-offset: 3px;
+  transition: all 0.3s;
+}
+
+.social-media-button img {
+  transition: all 0.3s;
+}
+
+.social-media-button:hover img {
+  transform: scale(1.15);
+}
+
+.social-media-button:hover:nth-child(1) {
+  background:  radial-gradient(
+      circle at 30% 107%, #fdf497 0%, 
+      #fdf497 5%, #fd5949 45%,
+      #d6249f 60%,#285AEB 90%
+  ); 
+}
+
+.social-media-button:hover:nth-child(2) {
+  background-color: var(--white);
+}
+
+.social-media-button:hover:nth-child(2) svg {
+  stroke: var(--x);
+}
+
+.social-media-button:hover:nth-child(3) {
+  background-color: var(--youtube);
+}
+
+.social-media-button:hover:nth-child(4) {
+  background-color: var(--linkedin);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: whitesmoke;
+  margin-top: 0; /* Removes extra space above the line */
+}
+
+/* Theme exchange button */
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center; /* Center the button */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-column {
+    width: 80%; /* Adjust width as needed for smaller screens */
+    margin-bottom: 40px; /* Space between columns when stacked */
+  }
+}
