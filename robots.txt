@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://felixkabange.github.io/befelix/sitemap.xml
